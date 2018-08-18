@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import BurgerMenu from './menu';
+
 
 const styles = {
     root: {
@@ -18,21 +18,21 @@ const styles = {
     },
     appbar: {
         position: "static",
-        color: 'orange',
     },
+    title: {
+        float: 'right',
+    }
 };
 
 function Header(props){
     const { classes } = props; 
     return ( 
         <div className={classes.root}>
-            <AppBar className={classes.appbar} >
+            <AppBar className={classes.appbar} color='inherit' aria-label='Menu' >
                 <Toolbar variant="dense" >
-                    <IconButton className={classes.menuButton} color='black' aria-label="Menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="title">
-                        Your Name here
+                        <BurgerMenu />
+                    <Typography variant="title" className={classes.title} >
+                        Pierce Morrill
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -40,7 +40,7 @@ function Header(props){
     )//return
 }//Header
 
-Header.PropTypes = {
+Header.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
