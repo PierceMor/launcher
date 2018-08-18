@@ -10,12 +10,13 @@ import Typography from '@material-ui/core/Typography';
 const styles = { 
 
     card : {
-        width: 600,
-        height: 600,
+        width: '100%',
+        height: '100%',
+        position: 'relative',
     },
-    meia: {
+    media: {
         height: 0,
-        paddingTop: '56%',
+        paddingTop: 12,
     },
 };
 
@@ -33,12 +34,12 @@ function Dashboard(props){
 
                 <CardContent>
 
-                    <Typography gutterBottom variant='headline' component='h2'>
+                    <Typography  variant='headline' component='h2'>
                         USER NAME HERE
                     </Typography>
 
                     <Typography component='p'>
-                        USER DESCRIPTION HERE 
+                        USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE USER DESCRIPTION HERE s
                     </Typography>
 
                 </CardContent>
