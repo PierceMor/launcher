@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import FileLoader from './fileLoader';
 
 const styles = {
     container: {
@@ -16,7 +15,9 @@ const styles = {
     }, 
 };
 
+
 function Inputs(props) {
+    
     const { classes } = props;
     return (
         <div className={classes.container}>
@@ -34,25 +35,8 @@ function Inputs(props) {
                 }}
             />
 
-            <Button 
-                accept="image/*"
-                multiple
-                type="file"
-                variant="contained" 
-                color="default" 
-                className={classes.button} 
-                style={{  margin: 20, }}
-            >
-                <input
-                    accept="image/*"
-                    className={classes.input}
-                    id="contained-button-file"
-                    multiple
-                    type="file"
-                />
-                <CloudUploadIcon className={classes.rightIcon} />
-            </Button>
 
+            <FileLoader />
 
 
             <Input 
