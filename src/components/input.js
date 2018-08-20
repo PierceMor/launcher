@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
 import FileLoader from './fileLoader';
+import Button from '@material-ui/core/Button';
 
 const styles = {
     container: {
@@ -15,13 +16,12 @@ const styles = {
     }, 
 };
 
-
 function Inputs(props) {
     
     const { classes } = props;
     return (
         <div className={classes.container}>
-
+        
             <h1>
                 Create your Own Profile Here
             </h1>
@@ -46,6 +46,10 @@ function Inputs(props) {
                 }}
             />
             
+            <Button style= {{ margin: 10, }} type="submit" variant='contained' component='span'>
+                Submit
+            </Button>
+
         </div>
     ) //return
 }//Inputs

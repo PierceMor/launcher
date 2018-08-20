@@ -7,23 +7,23 @@ class FileLoader extends Component {
 
     state = {
         selectedFile: null,
-    }
+    };
 
     fileSelectedHandler = event => {
         this.setState({
             selectedFile: event.target.files[0]
         })
-    }
+    };
 
     fileUploadHandler = () => {
         const fd = new FormData();
         fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
 
-        axios.post( 'target backend goes here, video suggests firebase cloud ', fd)
+        axios.post('/api/user', fd)
         .then(res => {
             console.log(res)
         })
-    }
+    };
 
     render(){
         return (
