@@ -35,9 +35,7 @@ function Inputs(props) {
                 }}
             />
 
-
             <FileLoader />
-
 
             <Input 
                 style={{ width: '100%', }}

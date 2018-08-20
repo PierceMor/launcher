@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const db = require('../models');
 mongoose.Promise = global.Promise;
 
+// This should fill out some empty data
+
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/launchpartner", 
     {
